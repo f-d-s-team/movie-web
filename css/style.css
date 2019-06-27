@@ -52,7 +52,7 @@ strong {
 }
 
 .btn-success:focus {
-  background-color: #000;
+  background-color: #222222;
   border-color: transparent;
 }
 
@@ -500,7 +500,7 @@ a:hover, a:active, a:focus {
 }
 
 .blog-post-des .btn:hover {
-  background: #000;
+  background:#222222;
   border-color: transparent;
   color: #ffffff;
 }
