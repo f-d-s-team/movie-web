@@ -9,7 +9,7 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Magnet - Minimal Portfolio Template</title>
+<title>登录与注册账户</title>
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -66,19 +66,19 @@
 					<div class="col-md-3 col-sm-12">
 					</div>
 					<div class="col-md-6 col-sm-12">
-						<form action="index.html" method="get" onsubmit="return valForm()">
+					   <form action="testsubmit.php" method="post" >onsubmit="return valForm()"
 							<div class="col-md-12 col-sm-6">
                               <p></p>
                          </div>
 
                          <div class="col-md-12 col-sm-6">
-                              <input type="text" id="hostname" class="form-control" placeholder="请填写用户名" >
+                              <input type="text" name="hostname" class="form-control" placeholder="请填写用户名" >
 							</div>
                          <div class="col-md-12 col-sm-6">
                               <p><span id="tip-hostname" style="display: none">用户名必须为8-12为字母或数字</span></p>
                          </div>
 						<div class="col-md-12 col-sm-6">
-                    		 <input type="password" id="pwd" class="form-control" placeholder="请输入密码"> 	 
+                    		 <input type="text" name="pwd" class="form-control" placeholder="请输入密码"> 	 
                          </div>
                          <div class="col-md-12 col-sm-6">
                               <p><span id="tip-pwd" style="display: none">密码必须为6位数字</span></p>
@@ -94,43 +94,7 @@
                               <p></p>
                          </div>
                     </form>
-					<script type="text/javascript">
-		//校验用户名密码是否合法
-		var iptName=document.getElementById('hostname');
-		var iptPwd=document.getElementById('pwd');
-		var tipName=document.getElementById('tip-hostname');
-		var tipPwd=document.getElementById('tip-pwd');
-
-		//对用户名和密码进行校验
-		function valForm(){
-			return valUserName()&&valPwd();
-		}
-
-		//校验用户名
-		function valUserName() {
-			var p=/^\w\w{7,11}$/;//用户名必须为8-12为字母或数字
-			var r=p.test(iptName.value);//校验
-			if(!r){
-				//校验不通过
-				tipName.style.display='inline-block';//显示
-				iptName.focus();
-				return false;
-			}
-			return true;
-		}
-
-		//校验密码
-		function valPwd(){
-			var p=/^\d\d{5}$/;//6位数字
-			var r=p.test(iptPwd.value);//校验
-			if(!r){
-				tipPwd.style.display='inline-block';
-				iptPwd.focus();//获取焦点
-				return false;
-			}
-			return true;
-		}
-	</script>
+					
 					</div>
 					<div class="col-md-3 col-sm-12">
 					</div>
