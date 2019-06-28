@@ -30,7 +30,7 @@
 			mysqli_select_db( $conn, 'FDS');
 			$sql="INSERT INTO USR (ID, PassWord) 
 			VALUES
-			('$_POST['hostname']','$_POST['pwd']')";
+			('$_POST[hostname]','$_POST[pwd]')";
 			$retval = mysqli_query($conn, $sql);
 			if(! $retval){
 				die("create error" . mysqli_error($conn));
