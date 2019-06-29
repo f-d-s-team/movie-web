@@ -42,7 +42,7 @@
 			   <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.html">首页</a></li>
                     <li><a href="about.html">联系FDS团队</a></li>
-                    <li><a href="blog.html">注册/登录</a></li>
+                    <li><a href="signout.php">退出</a></li>
                </ul>
 	      </div>
      </div>
@@ -59,7 +59,12 @@
                          
           </div>
 	     <div class="col-sm-6 col-md-6">
-          <h2>用户名</h2>            
+          <?php
+			session_start();
+		 	$hostname = $_SESSION['hostname'];
+		 	
+		?>
+			 <h2><?php echo $hostname; ?></h2>            
          </div>
 	   </div>
 
