@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+?>
 <html lang="en">
 <head>
 
@@ -60,7 +63,7 @@
           </div>
 	     <div class="col-sm-6 col-md-6">
           <?php
-			session_start();
+			
 		 	$hostname = $_SESSION['hostname'];
 		 	
 		?>

@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+?>
 <html lang="en">
 <head>
 
@@ -42,11 +45,14 @@
                </button>
 			   <a href="index.html"><img src="images/Logo.png" alt="Blog Image" width="60" height="53" class="img-responsive" style="position: absolute"></a>
 		  </div>
+		  <?php
+		 	$hostname = $_SESSION['hostname']; 	
+		  ?>
           <div class="collapse navbar-collapse"> 
 			   <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.html">首页</a></li>
                     <li><a href="about.html">联系FDS团队</a></li>
-                    <li><a href="blog.html">注册/登录</a></li>
+                    <li><a href="personal-info.php"><?php echo $hostname; ?></a></li>
                </ul>
 	      </div>
      </div>

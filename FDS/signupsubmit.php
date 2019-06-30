@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+	<?php
+			session_start();
+	?>
 <html>
 <head>
 <meta charset="utf-8">
-	<title></title>
+	<title>注册成功</title>
 </head>
 <body>
 	<div class="col-md-12 col-sm-12 col-xs-12">
@@ -15,10 +18,8 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<span style="color: #000000; font-size: 18px;background: #FBA027; padding:2px 5px"><a href="index.php">返回主页</a></span>
 	</div>
-	
+
 	<?php
-			session_start();
-	
 			$mydbhost = "localhost:3306";
 			$mydbuser = "root";
 			$mydbpass = 'Zw@445400';
