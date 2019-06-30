@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<?php 
-session_start();
-?>
+
 <html lang="en">
 <head>
 
@@ -45,14 +43,15 @@ session_start();
                </button>
 			   <a href="index.html"><img src="images/Logo.png" alt="Blog Image" width="60" height="53" class="img-responsive" style="position: absolute"></a>
 		  </div>
-		  <?php
-		 	$hostname = $_SESSION['hostname']; 	
-		  ?>
+
           <div class="collapse navbar-collapse"> 
 			   <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.html">首页</a></li>
                     <li><a href="about.html">联系FDS团队</a></li>
-                    <li><a href="personal-info.php"><?php echo $hostname; ?></a></li>
+                    <li><form action="personal-info.php" method="post">
+							<input type="hidden" name="hostname" value="<?php echo $_POST['hostname']; ?>">
+							<input type="submit" value="<?php echo $_POST['hostname']; ?>">
+						</form></li>
                </ul>
 	      </div>
      </div>

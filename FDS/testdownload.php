@@ -10,7 +10,7 @@
 <tr><td>hostname</td></tr>
 <tr><td>pwd</td></tr>
 	<?php
-			$mydbhost = "39.105.69.67:8080";
+			$mydbhost = "localhost:3306";
 			$mydbuser = "root";
 			$mydbpass = 'Zw@445400';
 			$conn = mysqli_connect($mydbhost, $mydbuser, $mydbpass);

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<?php 
-session_start();
-?>
+
 <html lang="en">
 <head>
 
@@ -45,7 +43,10 @@ session_start();
 			   <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.html">首页</a></li>
                     <li><a href="about.html">联系FDS团队</a></li>
-                    <li><a href="signout.php">退出</a></li>
+                    <li><form action="signout.php" method="post">
+							<input type="hidden" name="hostname" value="<?php echo $_POST['hostname']; ?>">
+							<input type="submit" value="退出">
+						</form></li>
                </ul>
 	      </div>
      </div>
@@ -62,12 +63,30 @@ session_start();
                          
           </div>
 	     <div class="col-sm-6 col-md-6">
-          <?php
-			
-		 	$hostname = $_SESSION['hostname'];
-		 	
-		?>
-			 <h2><?php echo $hostname; ?></h2>            
+
+			 <h2><?php echo $_POST['hostname']; ?></h2>   
+			 <table>
+			 <tr><td>hostname</td><td>pwd</td></tr>
+				<?php
+						$hostname = $_POST['hostname'];
+				 		$mydbhost = "localhost:3306";
+						$mydbuser = "root";
+						$mydbpass = 'Zw@445400';
+						$conn = mysqli_connect($mydbhost, $mydbuser, $mydbpass);
+						if(! $conn){
+							die("connect error: " . mysqli_error($conn));
+						}
+						$sql = "select * from USR where 'ID' = '$hostname'";
+						$result = mysql_query($sql);
+						while($row=mysql_fetch_assoc($result)){
+				?>
+						<tr><td><?php echo $row['hostname'];?></td>
+						<td><?php echo $row['pwd'];?></td>
+						</tr>
+			<?php
+			}
+			?>
+</table>
          </div>
 	   </div>
 

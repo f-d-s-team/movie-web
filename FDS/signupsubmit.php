@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-	<?php
-			session_start();
-	?>
+
 <html>
 <head>
 <meta charset="utf-8">
@@ -16,7 +14,11 @@
 	</div>
 	
 	<div class="col-md-12 col-sm-12 col-xs-12">
-		<span style="color: #000000; font-size: 18px;background: #FBA027; padding:2px 5px"><a href="index.php">返回主页</a></span>
+		<span style="color: #000000; font-size: 18px;background: #FBA027; padding:2px 5px"><a href="index.html">先不要点这个返回主页</a></span><br><br>
+		<form action="index.php" method="post">
+			<input type="hidden" name="hostname" value="<?php echo $_POST['hostname']; ?>">
+			<input type="submit" value="点这个返回主页">
+		</form>
 	</div>
 
 	<?php
@@ -37,7 +39,6 @@
 
 			}
 			mysqli_close($conn);
-			$_SESSION['hostname']=$_POST['hostname'];
 		?>
 
 </body>
