@@ -139,10 +139,10 @@ session_start();
 <!--new part or delete-->>	
 				<?php
 						$hostname = $_SESSION['hostname'];
-						
+						$set_charset = 'export LANG=en_US.UTF-8;';
 						$mvname = $_POST['searchmovie'];
-						$program="/usr/bin/python3 /opt/recommend/Recommend.py {$hostname} {$mvname} 2>error.txt";
-                        exec($program,$out,$ret);
+						$program="/usr/bin/python3 /opt/recommend/Recommend.py {$hostname} {$mvname} 2>error.txt 1>recommend.txt";
+                        exec($set_charset.$program,$out,$ret);
 						$servername = "localhost:3306";
 						$username = "root";
 						$password = "Zw@445400";

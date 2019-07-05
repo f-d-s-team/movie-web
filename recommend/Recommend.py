@@ -132,13 +132,13 @@ if __name__ == '__main__':
     # 建立用户画像users_profiles和用户看过的节目集items_users_saw_scores
     (users_profiles, items_users_saw_scores) = createUsersProfiles(ufs, items_profiles, label_names)
     # 为备选推荐节目集建立节目画像
-
+    print(sys.getfilesystemencoding())
     print("argv",sys.argv)
     user = sys.argv[1]
     print("user",user)
     items_to_be_recommended_profiles = None
     if len(sys.argv)>2:
-        #curfilm = bytes(sys.argv[2],'utf-16').decode('unicode_escape')       
+        #curfilm = sys.argv[2].encode('ascii',errors='surrogateescape').decode('utf-8',errors='surrogateescape')       
         curfilm =sys.argv[2]
         print(curfilm)
         #sys.stdout =codecs.getwriter("utf-8")(sys.stdout.detach())
