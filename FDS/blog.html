@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
@@ -13,14 +13,24 @@
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
-
+<link rel="shortcut icon" href="/images/Logo.png">
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
 
 </head>
-<body>
+<body style="background-attachment:fixed" background="images/background2.jpg">
+<script LANGUAGE="javascript">
+	$(window).load(function() {
+		$("body").css({"background-size":"100% "+$(document).height()+"px"});
+	})
+	$(window).resize(function () {
+		$("body").css({"background-size":"100% "+$(document).height()+"px"});
+	});
+</script>
+<script type="text/javascript" color="251,106,39" opacity='2'
 
+        zIndex="-99" count="150" src="js/背景.js">
+</script>
 <!-- PRE LOADER -->
 
 <div class="preloader">
@@ -40,13 +50,13 @@
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                </button>
-			   <a href="index.html"><img src="images/Logo.png" alt="Blog Image" width="60" height="53" class="img-responsive" style="position: absolute"></a>
+			   <a href="index.php"><img src="images/Logo.png" alt="Blog Image" width="60" height="53" class="img-responsive" style="position: absolute"></a>
 		  </div>
           <div class="collapse navbar-collapse"> 
 			   <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">首页</a></li>
-                    <li><a href="about.html">联系FDS团队</a></li>
-                    <li><a href="blog.html">注册/登录</a></li>
+                    <li><a href="index.php">首页</a></li>
+                    <li><a href="about.php">联系FDS团队</a></li>
+                    <li class="active"><a href="blog.html"><b>注册/登录</b></a></li>
                </ul>
 	      </div>
      </div>
@@ -60,26 +70,31 @@
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
                     <div class="section-title">
-                        <h3><span style="background:#FBA027; padding:2px 10px; border-radius: 10px">登录</span></h3>
-				<div class="col-md-12 col-sm-12">
+                        <div class="col-md-12 col-sm-12" style="background:rgba(255,255,255,0.3); border-radius: 20px; padding: 10px 20px 20px 20px; border-color: #FBA027">
+						<h3><span style="background:#FBA027; padding:2px 10px; border-radius: 10px;color: #FFFFFF">登录</span></h3>
+				<div class="col-md-12 col-sm-12" >
 					<div class="col-md-3 col-sm-12">
 					</div>
-					<div class="col-md-6 col-sm-12">
-					   <form action="signupsubmit.php" method="post" >
-							<div class="col-md-12 col-sm-6">
+					<div class="col-md-6 col-sm-12" style="text-align:left;color: #FFFFFF">
+					   <form action="signinsubmit.php" method="post" >
+							<div class="col-md-12 col-sm-12">
                               <p></p>
                          </div>
-
-                         <div class="col-md-12 col-sm-6">
-                             用户名：<br><input type="text" name="hostname" class="form-control"  placeholder="请填写用户名（必须为8-12位字母或数字）" >
+						  
+                         <div class="col-md-12 col-sm-12" >
+                            用户名：<br><input type="text" name="hostname" class="form-control"  placeholder="请填写用户名（必须为8-12位字母或数字）" >
 							</div>
-                        
-						<div class="col-md-12 col-sm-6">
-                    		 密码：<br><input type="text" name="pwd" class="form-control" placeholder="请输入密码（必须为6位数字）"> 	 
-                         </div>
-                         
-                         <div class="col-md-4 col-sm-6">
+                        <div class="col-md-12 col-sm-12">
                               <p></p>
+                         </div>
+						<div class="col-md-12 col-sm-12">
+							密码：<input type="password" name="pwd" class="form-control" placeholder="请输入6位数字的密码">
+						</div>
+                         <div class="col-md-12 col-sm-12">
+                              <p></p>
+                         </div>
+                         <div class="col-md-4 col-sm-4">
+                              <br><br>
                          </div>
                          <div class="col-md-4 col-sm-4" align="center">
                               <input type="submit" class="form-control"  style="background:#D5D5D5" value="点击登录">
@@ -93,6 +108,7 @@
 					</div>
 					<div class="col-md-3 col-sm-12">
 					</div>
+				</div>
 				</div>
 					<div class="col-md-offset-1 col-md-10 col-sm-12">
                          <div class="col-md-12 col-sm-6">
@@ -109,110 +125,130 @@
                         
                          <div class="blog-post-title">
                            <h3 align="center"><a href="single-post.html">&nbsp;</a></h3>
-                           <h3 align="center">还没有属于您的账户？</h3>
-                           <h3 align="center">滑动至下方快速注册</h3>
+                           <h3 align="center">还没有属于您的账户？ &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br><br> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;滑动至下方快速注册~</h3>
                          </div>
-</div>
+					</div>
 
                     <div class="blog-post-thumb">
-                         <div class="blog-post-image">
-                              <a href="single-post.html">
-                                   <img src="images/blog-image2.jpg" style="border-radius: 18px" class="img-responsive" alt="Blog Image">
-                              </a>
+                         <div class="blog-post-thumb">
+                                   <img src="images/blog-image2.jpg" alt="Blog Image" style="border-radius: 18px;border:5px ;border-color:#FBA027" class="img-responsive" >
                          </div>
                          <div class="blog-post-title">
-                              <h3><a href="single-post.html">为什么要注册一个账户？</a></h3>
+                              <h3>为什么要注册一个账户？</h3>
                          </div>
-                         <div class="blog-post-format">
-                              <span><a href="#"><img src="images/author-image2.jpg" class="img-responsive img-circle"><b>李柏林先生</b></a></span>
+						<div class="col-md-12 col-sm-12" style="background:rgba(255,255,255,0.15); border-radius: 20px; padding: 10px 20px 20px 20px;">
+                         <div class="blog-post-format" style="color: #ffffff">
+                              <span><img src="images/author-image2.jpg" class="img-responsive img-circle" alt="image1"><b>李柏林先生</b></span>
                               <span><em class="fa fa-date"></em>2019年6月27日</span>
-                              <span><a href="#"><em class="fa fa-comment-o"></em> 23 Comments</a></span>
+                              <span><em class="fa fa-comment-o"></em> 23 Comments</span>
                          </div>
                          <div class="blog-post-des">
-                           <p> &nbsp; &nbsp;&nbsp;&nbsp;说实在的这个东西实在是太方便了，我从来来没有感觉到一个产品能做到如此良心过。我喜欢去影院看电影，但是时常不知道应该怎么样选择多久去影院看，有时候人太多，氛围不好，有时候票价太贵，感觉有一些不值，自从用了<strong>FDS团队</strong>开发的<strong>ForCinema</strong>这个网站，一切都变得如此轻松而惬意！</p>
-                           <a href="single-post.html" class="btn btn-default">了解更多</a>
+                           <p> &nbsp; &nbsp;&nbsp;&nbsp;说实在的这个东西实在是太方便了，我从来来没有感觉到一个产品能做到如此良心过。我喜欢去影院看电影，但是时常不知道应该怎么样选择多久去影院看，有时候人太多，氛围不好，有时候票价太贵，感觉有一些不值，自从用了<strong>FDS团队</strong>开发的<strong>ForCinema</strong>这个网站，一切都变得如此轻松而惬意！<br>
+                           <a href="single-post.html" class="btn btn-default">了解更多</a></p>
                          </div>
                          <div class="col-md-12 col-sm-6">
-                              <p><br/></p>
+                              <br><br>
                          </div>
-						<div class="blog-post-format">
-                              <span><a href="#"><img src="images/author-image1.jpg" class="img-responsive img-circle"><b>杨琳女士</b></a></span>
+						<div class="blog-post-format" style="color: #ffffff">
+                              <span><img src="images/author-image1.jpg" class="img-responsive img-circle" alt="image2"><b>杨琳女士</b></span>
                               <span><em class="fa fa-date"></em> 2019年6月26日</span>
-                              <span><a href="#"><em class="fa fa-comment-o"></em> 45 Comments</a></span>
+                              <span><em class="fa fa-comment-o"></em> 45 Comments</span>
                          </div>
 						
                          <div class="blog-post-des">
-                           <p> &nbsp; &nbsp; 我和我老公很喜欢去影院看电影，但是维持家庭不容易，有时候影院人非常多，让我和先生感觉到观影体验有所下降。当时看见这个网站，觉得可以试一试，没想到根据网站的提示，每次去影院体验都非常棒！现在已经推荐给我的朋友们了。</p>
-                           <a href="single-post.html" class="btn btn-default">了解更多</a>
+                           <p> &nbsp; &nbsp; 我和我老公很喜欢去影院看电影，但是维持家庭不容易，有时候影院人非常多，让我和先生感觉到观影体验有所下降。当时看见这个网站，觉得可以试一试，没想到根据网站的提示，每次去影院体验都非常棒！现在已经推荐给我的朋友们了。<br>
+                           <a href="single-post.html" class="btn btn-default">了解更多</a></p><br><br>
                          </div>
-					  <div class="blog-post-format">
-							<p></p>
-							<p></p>
+					  <div class="col-md-12 col-sm-12" style="background:rgba(255,255,255,0.15); border-radius: 20px; padding: 10px 20px 20px 20px; border-color: #FBA027">
+						<div class="blog-post-format">
+							
+
 							<h3 align="center"><span style="background:#FBA027; padding:2px 10px; border-radius: 10px">注册账户</span></h3>
 					  </div>
 			<div class="col-md-12 col-sm-12">
 				<div class="col-md-3 col-sm-12">
 				</div>
-				<div class="col-md-6 col-sm-12">
-					<form action="index.html" method="post">
+				<div class="col-md-6 col-sm-12" style="color: #FFFFFF">
+					<form action="signupsubmit.php" method="post">
 						<div class="col-md-12 col-sm-6">
               				<p></p>
 						</div>
-						<div class="col-md-12 col-sm-6">
-							用户名：<input type="text" name="hostname" class="form-control" placeholder="请输入一个用户名" >
+						<div class="col-md-12 col-sm-12">
+							用户名：<input type="text" name="hostname" class="form-control" placeholder="请输入一个8-12位字母或数字用户名" >
 						</div>
-						<div class="col-md-12 col-sm-6">
+						<div class="col-md-12 col-sm-12">
 							<p><span id="tip-hostname" style="display: none">用户名必须为8-12位字母或数字</span></p>
 						</div>
-						<div class="col-md-12 col-sm-6">
+						<div class="col-md-12 col-sm-12">
 							注册邮箱：<input type="email" name="email" class="form-control" placeholder="请输入注册邮箱">
 						</div>
-						<div class="col-md-12 col-sm-6">
+						<div class="col-md-12 col-sm-12">
 							<p></p>
 						</div>
-						<div class="col-md-12 col-sm-6">
-							密码：<input type="password" name="pwd" class="form-control" placeholder="请输入密码">
+						<div class="col-md-12 col-sm-12">
+							密码：<input type="password" name="pwd" class="form-control" placeholder="请输入6位数字的密码">
 						</div>
-						<div class="col-md-12 col-sm-6">
+						<div class="col-md-12 col-sm-12">
                             <p><span id="tip-pwd" style="display: none">密码必须为6位数字</span></p>
                         </div>
 						
-						<div class="col-md-12 col-sm-6">
+						<div class="col-md-12 col-sm-12">
 							您的性别：
 							<input type="radio" name="gender" value="male" > 男
 							<input type="radio" name="gender" value="female" > 女
 							<input type="radio" name="gender" value="none" > 不想告诉别人~
 						</div>
-						<div class="col-md-12 col-sm-6">
+						<div class="col-md-12 col-sm-12">
 							<p></p>
 						</div>
-						<div class="col-md-3 col-sm-6">
-							  <p></p>
-						   </div>
-						<div class="col-md-6 col-sm-4">
-							<input type="submit" class="form-control"  style="background:#D5D5D5" value="提交注册信息">
-						  </div>
-						<div class="col-md-3 col-sm-6">
-							  <p></p>
-						   </div>
+						<div class="col-md-12 col-sm-12">
+							在这里选择你清楚自己喜欢的一些电影类型吧！<br>
+							<input type="checkbox" name="usrtag[]" value="悬疑" ><label>悬疑</label>
+							<input type="checkbox" name="usrtag[]" value="爱情" ><label>爱情</label>
+							<input type="checkbox" name="usrtag[]" value="动画" ><label>动画</label>
+							<input type="checkbox" name="usrtag[]" value="动作" ><label>动作</label><br>
+							<input type="checkbox" name="usrtag[]" value="奇幻" ><label>奇幻</label>
+							<input type="checkbox" name="usrtag[]" value="惊悚" ><label>惊悚</label>
+							<input type="checkbox" name="usrtag[]" value="剧情" ><label>剧情</label>
+							<input type="checkbox" name="usrtag[]" value="科幻" ><label>科幻</label><br>
+							<input type="checkbox" name="usrtag[]" value="恐怖" ><label>恐怖</label>
+							<input type="checkbox" name="usrtag[]" value="喜剧" ><label>喜剧</label>
+							<input type="checkbox" name="usrtag[]" value="冒险" ><label>冒险</label><br>
+							<input type="checkbox" name="usrtag[]" value="家庭" ><label>家庭</label>
+							<input type="checkbox" name="usrtag[]" value="犯罪" ><label>犯罪</label>
+							<input type="checkbox" name="usrtag[]" value="纪录片" ><label>纪录片</label>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<p></p>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-3 col-sm-3">
+							</div>
+							<div class="col-md-6 col-sm-6">
+							<input type="submit" class="form-control"  style="background:#D5D5D5" value="提交注册信息" >
+							</div>
+							<div class="col-md-3 col-sm-3">
+							</div>
+						</div>
+						
 				</form>
 				</div>
 				<div class="col-md-3 col-sm-12">
 				</div>
 			</div>
-					
+				</div>	
                  </div>
                </div>
-
+			</div>
           </div>
-     </div>
+		 </div>
 </section>
 
 <!-- Footer Section -->
 
 <footer>
      <div class="container">
-          <div class="row" style="background: #D3D3D3;border-radius: 20px">
+          <div class="row" style="background:rgba(255,255,255,0.1);border-radius: 20px">
 
                <div class="col-md-3 col-sm-3" style="padding-top:15px">
                     <img src="images/Logo.png" alt="Blog Image" width="80" height="53" class="img-responsive">

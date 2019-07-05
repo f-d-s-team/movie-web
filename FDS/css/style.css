@@ -1,9 +1,15 @@
 body {
-		background: #ffffff;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	height:100%;
+	width:100%;
+	/*background:url("../images/background1.jpg");*/
     font-family: 'Work Sans', sans-serif;
     font-style: normal;
 	padding: 15px 20px;
-		font-weight: 300;
+	font-weight: 300;
     overflow-x: hidden;
 }
 
@@ -19,29 +25,32 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
+	color:#FFFFFF;
     font-size: 62px;
     padding-bottom: 14px;
     margin-bottom: 0px;
 }
 
 h2 {
+	color:#FFFFFF;
   font-size: 42px;
   line-height: 46px;
 }
 
 h3 {
+	color:#FFFFFF;
   font-size: 32px;
 }
 
 h4 {
-  color: #000000;
+  color:#FFFFFF;
   font-size: 18px;
   font-weight: normal;
   letter-spacing: 2px;
 }
 
 p {
-    color: #777;
+    color:#FFFFFF; /*#777*/
     font-size: 15px;
     font-weight: 300;
     line-height: 26px;
@@ -67,14 +76,14 @@ html{
 }
 
 a {
-  color: #4d638c;
+  color: #ffffff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   text-decoration: none !important;
 }
 a:hover, a:active, a:focus {
-    color: #000000;
+    color:  #FBA027;/*#333*/
     outline: none;
 }
 
@@ -113,7 +122,33 @@ a:hover, a:active, a:focus {
   letter-spacing: 4px;
 }
 
+.special a,
+.special a:hover,
+.special a:focus{
+	color:#232323;
+    background-color: transparent;
+}
 
+.special  a {
+    color: #ffffff;/*#777*/
+    letter-spacing: 1px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.special2 a,
+.special2 a:hover,
+.special2 a:focus{
+	color:#FBA027;
+    background-color: transparent;
+}
+
+.special2  a {
+    color: #ffffff;/*#777*/
+    letter-spacing: 1px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
 /*---------------------------------------
     Preloader section              
 -----------------------------------------*/
@@ -178,11 +213,12 @@ a:hover, a:active, a:focus {
 -----------------------------------------*/
 
 .navbar-default {
-    background: #D3D3D3;
+    background:rgba(255,255,255,0.2);
     padding: 5px 10px;
     border: none;
 	border-radius: 20px;
     margin-top: 10px;
+	height: 60px;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -190,17 +226,17 @@ a:hover, a:active, a:focus {
 }
 
 .navbar-default .navbar-brand {
-  padding-top: 6px;
+  padding-top: 10px;
 }
 
 .navbar-default .navbar-brand .fa {
-  color: #000;
+  color:  #000;
   font-size: 42px;
 }
 
 .navbar-default .navbar-nav li a {
-    color: #777;
-    font-size: 16px;
+    color: #ffffff;/*#777*/
+    font-size: 18px;
     letter-spacing: 1px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
@@ -209,7 +245,8 @@ a:hover, a:active, a:focus {
 }
 
 .navbar-default .navbar-nav > li a:hover {
-    color: #333 !important;
+    color:  #FBA027 !important;
+	font-size: 22px;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -220,13 +257,13 @@ a:hover, a:active, a:focus {
 
 .navbar-default .navbar-nav li a:hover,
  .navbar-default .navbar-nav .active > a {
-    color: #333;
+    color:  #333;
   }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #333;
+    color:  #FBA027;
     background-color: transparent;
 }
 
@@ -396,7 +433,12 @@ a:hover, a:active, a:focus {
     padding-left: 14px;
 }
 
-
+#single-project  a,
+#single-project  a:hover,
+#single-project  a:focus{
+	color:#232323;
+    background-color: transparent;
+}
 
 /*---------------------------------------
    Contact section              
@@ -437,7 +479,9 @@ a:hover, a:active, a:focus {
   background: #000;
 }
 
-
+.placeholder1{
+	color:#ffffff;
+}
 
 /*---------------------------------------
    Blog section              
@@ -458,7 +502,8 @@ a:hover, a:active, a:focus {
 
 .blog-post-image {
   padding-bottom: 18px;
-  width: 100%;
+  width: 95%;
+  border:5px;
 }
 
 .blog-post-title a {
@@ -617,7 +662,7 @@ footer .col-md-3 .fa {
 }
 
 footer a {
-  color: #555;
+  color: #ffffff;
 }
 
 footer hr {
